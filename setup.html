@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+  </head>
+  <body>
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="#MacOS" class="w3-bar-item w3-button">MacOS</a>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:25%">
+
+  <div class="w3-container w3-teal">
+  </div>
+<a name="MacOS">
+<h2>MacOS</h2>
+<p>To begin setup, you will need Administrator privalages. There are 2 methods of installing it, the first is an automated script, the second is manually by hand, entering each line yourself</p>
+<button onclick="MacOSOneClick()">One Click Inlstall</button>
+<br>
+<h3>Step 1: Install Homebrew</h3>
+<br>
+<p>Homebrew is a special package manager that is required by a number of other applications, to do this, open terminal, and run the comand below (you can copy and paste it, just hit enter and it will run</p>
+<br>
+<a id="brewcode">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</a>
+<button aria-label="Copy to clipboard"onclick=copyCode(brewcode)>📋</button>
+<br>
+<iframe src="https://brew.sh/#copyable" style="border:none;"></iframe>
+</a>
+
+<h3>Step 2: Adding to path</h3>
+<br>
+<p>Now that it has been downloaded and installed, we need to add it to the terminal profile, so that both other applications and ourselves can use it in the future.</p>
+<br>
+<p>Close any terminal windows and open a new one up, and type in `nano .zprofile`</p>
+<a id="zprofilecode">export PATH=/opt/homebrew/bin/:$PATH</a>
+
+<h3>Step 3: Install WGET</h3>
+<p>A large number of the scripts on this website use WGET as a dependency, so we will install it now to make sure that </p>
+
+
+</body>
+<script>
+function MacOSOneClick(){window.open('projects/setup/SetupMacOS.command')}
+function copyCode(id)
+{
+  navigator.clipboard.writeText(document.getElementById(id));
+}
+</script>
